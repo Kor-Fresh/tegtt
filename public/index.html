@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1" />
+        <meta http-equiv="Cache-Control" content="NO-CACHE" />
+        <meta http-equiv="Expires" content="-1" />
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="Robots" content="noindex, nofollow" />
+        
+        <title><%= VUE_APP_NAME %></title>
+        <meta name="Author" content="<%= VUE_APP_META_AUTHOR %>" />
+        <meta name="Keywords" content="<%= VUE_APP_META_KEYWORDS %>" />
+        <meta name="Description" content="<%= VUE_APP_META_DESCRIPTION %>" />
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Roboto+Mono:500|Material+Icons" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.9.95/css/materialdesignicons.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.5.8/dist/vuetify.min.css" />
+        <!--[if IE]>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xdomain/0.8.2/xdomain.min.js" slave="<%= VUE_APP_CORS_URL %>"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "<%= VUE_APP_NAME %>",
+            "url": "<%= VUE_APP_DOMAIN %>",
+            "sameAs": []
+        }
+    </script>
+</html>
