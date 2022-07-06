@@ -54,9 +54,7 @@ export default {
 		return {
 			drawer: true,
 			items: [
-				{ title: 'Home', icon: 'mdi-home-city', viewName: 'home' },
-				{ title: 'Daughter', icon: 'mdi-account', viewName: 'daughter' },
-				{ title: 'Joys', icon: 'mdi-account-group-outline', viewName: 'joy' },
+				{ title: 'Home', icon: 'mdi-home-city', viewName: 'home' }
 			],
 			mini: false
 		}

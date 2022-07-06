@@ -9,14 +9,11 @@ import { app } from '@/main';
 /**
  * @brief axios 기본 헤더 선언
  */
-axios.defaults.headers['Authorization'] = '';
-axios.defaults.headers['Platform'] = 'Web';
-axios.defaults.headers['Service'] = 'Eum-Super';
 
 /**
  * @brief API 서버 URL
  */
-const API_URL = process.env.VUE_APP_API_URL;
+const API_URL = "http://youareflower.shop";
 
 /**
  * @brief axios 성공 처리

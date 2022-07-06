@@ -1,6 +1,4 @@
-import cookie from 'vue-cookie';
 import { FETCH_GET, FETCH_POST, FETCH_PUT, FETCH_DELETE } from '@/utils/axios/fetch';
-import { FETCH_ALL, FETCH_ALL_GET, FETCH_ALL_POST, FETCH_ALL_PUT, FETCH_ALL_DELETE } from '@/utils/axios/fetch-all'
 
 const INITIALIZE = () => {
 	return {
@@ -19,45 +17,30 @@ const MUTATIONS = {
 	{
 		state.need_fetch = false;
 		state.need_refresh = false;
-	},
-	NEED_FETCH(state)
-	{
-		state.need_fetch = true;
-	},
-	NEED_FETCH_DONE(state)
-	{
-		state.need_fetch = false;
-	},
-	NEED_REFRESH(state)
-	{
-		state.need_refresh = true;
-	},
-	NEED_REFRESH_DONE(state)
-	{
-		state.need_refresh = false;
-	},
-	SET_DIALOG(state, data)
-	{
-		state.dialog = true;
-		state.data.dialog = Object.assign({}, data);
-	},
-	UNSET_DIALOG(state)
-	{
-		state.dialog = false;
-		state.data.dialog = null;
-	},
-	SET_MESSAGE(state, data)
-	{
-		state.data.message = data;
-	},
-	UNSET_MESSAGE(state)
-	{
-		state.data.message = null;
 	}
 };
 
 const ACTIONS = {
-
+	async call_list({ state, commit, dispatch }, data)
+	{
+		return FETCH_GET('/test1.php', data, (response) => {
+			if(response.status === 200)
+			{
+				return response;
+			}
+			return false;
+		});
+	},
+	async call_list2({ state, commit, dispatch }, data)
+	{
+		return FETCH_GET('/test2.php', data, (response) => {
+			if(response.status === 200)
+			{
+				return response;
+			}
+			return false;
+		});
+	},
 };
 
 export default
